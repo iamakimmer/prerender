@@ -7,6 +7,8 @@ var server = prerender({
 });
 
 
+server.use(prerender.actorindex());
+server.use(prerender.removeScriptTags());
 server.use(prerender.sendPrerenderHeader());
 // server.use(prerender.basicAuth());
 // server.use(prerender.whitelist());
